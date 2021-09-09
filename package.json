@@ -1,0 +1,25 @@
+{
+  "name": "cms-custom-objects-example",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HubSpot/cms-custom-objects-example.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/HubSpot/cms-custom-objects-example/issues"
+  },
+  "homepage": "https://github.com/HubSpot/cms-custom-objects-example#readme",
+  "scripts": {
+    "setup": "hs custom-object schema create ./resources/property-listing-schema.json && npm run createData",
+    "createData": "hs custom-object create propertylisting ./resources/property-listings.json",
+    "upload": "hs upload hub-homes hub-homes",
+    "develop": "hs watch hub-homes hub-homes"
+  },
+  "devDependencies": {
+    "@hubspot/cms-cli": "^2.1.0"
+  }
+}
